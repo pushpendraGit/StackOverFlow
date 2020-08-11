@@ -48,14 +48,17 @@ class App extends Component {
 
         <div className="main">
           <Aside />
+          <div className='core'>
+    {result.length === 0 && <h1 className="top">Top Question</h1>}
 
           <div className="main_content">
-            {result.length === 0 && <h1>Top Question</h1>}
+           
 
             <div className="list">
               {currentPost.map((item) => (
                 <Result item={item} dispatch={this.props.dispatch} />
               ))}
+            </div>
             </div>
             <Pagination
               postsPerPage={postPerPage}

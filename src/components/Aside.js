@@ -6,7 +6,7 @@ class Aside extends Component {
       <div classNames="aside">
         <div className="aside__inner">
           <ul>
-            <li className="active__home">Home</li>
+            <li className="active__home"><a href="/">Home</a></li>
             <li>Public</li>
             <li>Find A Job</li>
             <li>Teams</li>

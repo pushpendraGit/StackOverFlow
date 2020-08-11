@@ -8,7 +8,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   }
 
   return (
-    <nav>
+    <nav className="page">
       <ul className="pagination">
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 255, 255);
 }
 .nav {
   display: flex;
@@ -43,6 +44,7 @@ body {
   align-items: center;
   margin-top: 30px;
   flex-direction: column;
+  border-right: 0.5px solid rgb(239, 240, 241);
 }
 
 .reasult {
@@ -82,4 +84,65 @@ body {
   font-weight: 600;
   background-color: rgb(239, 240, 241);
   border-right: 3px solid rgb(244, 128, 36);
+}
+
+.page {
+  bottom: 0px;
+}
+
+.top {
+  height: 30px;
+}
+
+.core {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 978px) {
+  .nav__input {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .aside__inner {
+    display: none;
+  }
+
+  .nav__input {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 722px){
+
+  .reasult {
+    width: 550px;
+    margin-left: 0px;
+   font-size: fit-content(12mm);
+   word-wrap: break-word;
+
+  }
+
+  .reasult h3 a {
+   word-wrap: break-word;
+  }
+
+  .reasult h3 {
+    word-wrap: break-word;
+  }
+  
+  
+
+
+
+}
+
+
+@media only screen and (max-width: 600px){
+
+  .logo{
+    display: none;
+  }
 }
