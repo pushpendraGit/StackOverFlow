@@ -9,11 +9,15 @@ export function questionIsSuccess(data) {
   };
 }
 
+const s = axois.create({
+  baseURL:'http://api.stackexchange.com/2.2'
+})
+
 export default function question(text) {
   return async (dispatch) => {
-    const url = `http://api.stackexchange.com/2.2/questions?order=desc&sort=activity&site=stackoverflow`;
+    const url = `/questions?order=desc&sort=activity&site=stackoverflow`;
     console.log(url);
-    const responce = await axois.get(url);
+    const responce = await s.get(url);
 
     console.log(responce.data.items);
 

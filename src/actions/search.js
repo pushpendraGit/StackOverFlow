@@ -25,7 +25,9 @@ export function searchIsFailed(err){
 }
 
 
-
+const s = axois.create({
+  baseURL:'http://api.stackexchange.com/2.2'
+})
 
 
 
@@ -34,9 +36,9 @@ export function searchIsFailed(err){
 export default function search(text) {
   return async (dispatch) => {
     dispatch(searchIsStated);
-    const url = `http://api.stackexchange.com//2.2/search/advanced?order=desc&sort=activity&q=${text}&site=stackoverflow`
+    const url = `/search/advanced?order=desc&sort=activity&q=${text}&site=stackoverflow`
     console.log(url);
-    const responce = await axois.get(url);
+    const responce = await s.get(url);
 
     console.log(responce.data.items)
 
@@ -48,9 +50,9 @@ export default function search(text) {
 export  function searchWithTag(text) {
   return async (dispatch) => {
     dispatch(searchIsStated);
-    const url = `http://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&tagged=${text}&site=stackoverflow`
+    const url = `/search/advanced?order=desc&sort=activity&tagged=${text}&site=stackoverflow`
     console.log(url);
-    const responce = await axois.get(url);
+    const responce = await s.get(url);
 
     console.log(responce.data.items)
 
