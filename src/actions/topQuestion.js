@@ -10,7 +10,7 @@ export function questionIsSuccess(data) {
 }
 
 const s = axois.create({
-  baseURL:'http://api.stackexchange.com/2.2'
+  baseURL:'https://api.stackexchange.com/2.2'
 })
 
 export default function question(text) {
