@@ -43,3 +43,20 @@ export default function search(text) {
     dispatch(searchIsSuccess(responce.data.items))
   };
 }
+
+
+export  function searchWithTag(text) {
+  return async (dispatch) => {
+    dispatch(searchIsStated);
+    const url = `http://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&tagged=${text}&site=stackoverflow`
+    console.log(url);
+    const responce = await axois.get(url);
+
+    console.log(responce.data.items)
+
+    dispatch(searchIsSuccess(responce.data.items))
+  };
+}
+
+
+

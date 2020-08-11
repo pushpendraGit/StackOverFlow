@@ -19,12 +19,12 @@ class App extends Component {
     this.props.dispatch(question());
   }
 
-  paginate  = (pageNumber) => {
+  paginate = (pageNumber) => {
     this.setState({
       ...this.state,
-      currentPage:pageNumber
-    })
-  }
+      currentPage: pageNumber,
+    });
+  };
 
   render() {
     const { result } = this.props.search;
@@ -45,20 +45,23 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-       
 
         <div className="main">
-        <Aside />
-          
+          <Aside />
+
           <div className="main_content">
-            {result.length === 0 && <h1>Top Questions </h1>}
+            {result.length === 0 && <h1>Top Question</h1>}
 
             <div className="list">
               {currentPost.map((item) => (
                 <Result item={item} dispatch={this.props.dispatch} />
               ))}
             </div>
-            <Pagination postsPerPage={postPerPage} totalPosts={30} paginate={this.paginate} />
+            <Pagination
+              postsPerPage={postPerPage}
+              totalPosts={30}
+              paginate={this.paginate}
+            />
           </div>
         </div>
       </div>
