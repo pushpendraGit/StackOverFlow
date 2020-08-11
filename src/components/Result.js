@@ -8,7 +8,7 @@ class Result extends Component {
 
     return (
       <div className="reasult">
-        <h3>
+        <h3 className="r__main">
           <a href={link}>{title}</a>
         </h3>
       </div>

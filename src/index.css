@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -6,8 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(255, 255, 255);
-}
-.nav {
+} */
+.navi {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +20,8 @@ body {
   border-top: 3px solid rgb(244, 128, 36);
 }
 
-.nav__input {
-  width: 550px;
+.navi__input {
+  width: 600px;
 }
 
 .logo img {
@@ -49,8 +49,8 @@ body {
 
 .reasult {
   display: flex;
-  width: 600px;
-  border-bottom: 1px solid rgb(239, 240, 241);
+  /* width: 600px; */
+  border-bottom: 1px solid rgb(91, 98, 105);
   margin-left: 20px;
 
   align-items: center;
@@ -58,6 +58,7 @@ body {
 
 .reasult h3 a {
   text-decoration: none;
+  width: fit-content;
 }
 
 .aside__inner {
@@ -91,58 +92,92 @@ body {
 }
 
 .top {
-  height: 30px;
+  height: 50px;
+  
+  border-bottom: 2px solid rgb(91, 98, 105);
 }
 
 .core {
   display: flex;
   flex-direction: column;
+  width: 70%;
 }
 
-@media only screen and (max-width: 978px) {
-  .nav__input {
-    width: 200px;
+.aside {
+  width: 20%;
+}
+
+/* .r__main{
+  width: 600px;
+} 
+*/
+
+@media only screen and (max-width: 1017px) {
+  body {
+    background-color: lightblue;
   }
-}
 
-@media only screen and (max-width: 600px) {
   .aside__inner {
     display: none;
   }
 
-  .nav__input {
-    width: 120px;
-  }
-}
-
-@media only screen and (max-width: 722px){
-
   .reasult {
-    width: 550px;
-    margin-left: 0px;
-   font-size: fit-content(12mm);
-   word-wrap: break-word;
-
+    display: flex;
+    width: 100vw;
+    border-bottom: 1px solid rgb(239, 240, 241);
+    /* margin-left: 20px; */
+  }
+  .reasult h3{
+    margin-left: 10px;
   }
 
-  .reasult h3 a {
-   word-wrap: break-word;
+  .main_content {
+    width: 100vw;
+    /* display: flex;
+    justify-content: center; */
+
+    margin-top: 30px;
+    flex-direction: column;
+    border-right: 0.5px solid rgb(239, 240, 241);
   }
 
-  .reasult h3 {
-    word-wrap: break-word;
+  .top {
+    height: 50px;
+    width: 100vw;
+    border-bottom: 2px solid rgb(91, 98, 105);
+  }
+
+  .navi__input {
+    width: 300px;
   }
   
+  .logo img {
+    height: 30px;
+    object-fit: contain;
+    
   
-
-
-
+    background-color: rgb(250, 250, 251);
+  }
+  
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
 
-  .logo{
+  .logo img{
     display: none;
   }
+
+
+
+}
+
+
+@media only screen and (max-width: 400px)
+{
+
+  .navi__input{
+    width: 70vw;
+  }
+
 }
